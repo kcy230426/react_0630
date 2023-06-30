@@ -3,7 +3,7 @@ import hd from '../scss/hd.module.css'
 const Hd = (props) => {
     // const 내부에 map을 쓰면 Hd에서만 사용 가능. 외부에 적으면 다른 곳에서도 사용 가능
     const hddata = {
-        pAction:true,
+        pAction:props.action,
         promotion:{
             title:"오늘의 특가",
             href:"https://naver.com",

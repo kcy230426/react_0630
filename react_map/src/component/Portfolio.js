@@ -20,13 +20,17 @@ export default function Portfolio(props) {
             </div>
             
             <div id="pt-wrap">
-                <ul id="pt-box" className='text-left'>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                </ul>
+                <div id="pt-box">
+                    <ul id="pt-ul" className='text-left'>
+                        <p>● 검색 인기 상품을 확인해 보세요!</p>
+                        <li><a href="">마그네슘</a><i class="bi bi-caret-right-fill"></i></li>
+                        <li><a href="">루테인</a><i class="bi bi-caret-right-fill"></i></li>
+                        <li><a href="">멀티비타민</a><i class="bi bi-caret-right-fill"></i></li>
+                        <li><a href="">칼슘</a><i class="bi bi-caret-right-fill"></i></li>
+                        <li className='border-0'><a href="">감마리놀렌산</a><i class="bi bi-caret-right-fill"></i></li>
+                    </ul>
+                    <div class="pt-info">*2022년 20대 데이터 기준. 상세 집계 기준은 하단 확인</div>
+                </div>
             </div>
         </section>
         </>

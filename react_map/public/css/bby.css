@@ -147,15 +147,50 @@ body {
   justify-content: center;
 }
 #pt #pt-box {
-  width: 60%;
-  height: 508px;
-  border-radius: 50px;
+  width: 65%;
+  height: 600px;
+  border-radius: 30px;
   background-color: #508efe;
   background-size: contain;
-  background-position: 500px;
+  background-position: 560px;
   background-position-y: 80px;
   background-repeat: no-repeat;
   background-image: url("https://campaign-cdn.pstatic.net/0/campaign/2023/03/healthychart/img_v2/bg_age_keyword.png");
+}
+#pt #pt-box .pt-info {
+  margin-right: 40px;
+  margin-top: 20px;
+  text-align: right;
+  color: white;
+}
+#pt #pt-box #pt-ul {
+  display: inline-block;
+}
+#pt #pt-box #pt-ul p {
+  font-size: 14pt;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 40px;
+  color: white;
+}
+#pt #pt-box #pt-ul li {
+  position: relative;
+  margin-left: 50px;
+  border-bottom: 1px rgba(255, 255, 255, 0.37) solid;
+  color: white;
+  padding: 15px 0;
+  font-family: "Noto Sans KR";
+  font-weight: 700;
+  font-size: 26pt;
+}
+#pt #pt-box #pt-ul li a {
+  color: white;
+}
+#pt #pt-box #pt-ul i {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
 }
 #pt .agewrap {
   display: flex;
@@ -164,7 +199,7 @@ body {
 #pt #agebox {
   margin-top: 30px;
   margin-bottom: 30px;
-  padding: 10px 10px;
+  padding: 5px;
   background-color: rgba(244, 245, 246, 0.9);
   display: flex;
   justify-content: center;
