@@ -8,11 +8,11 @@ export default function Content(props) {
     
 
     return (
-        <>
+        <section id={props.cid}>
            <Banner></Banner>
            <Portfolio></Portfolio> 
            <Interview></Interview>
            <Contact></Contact>
-        </>
+        </section>
     )
 }

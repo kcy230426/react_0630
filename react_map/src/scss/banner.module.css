@@ -1,7 +1,11 @@
+.mt52{
+    margin-top: 52px;
+}
+
 .container{
-    width:50vw;
-    margin: 0 auto;
+    position: relative;
+    height: 770px;
+    margin: 0 20px;
+    border-radius: 20px;
 }
-.row{
-    background-color: red;
-}
+

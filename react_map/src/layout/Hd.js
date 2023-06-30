@@ -1,71 +1,93 @@
-export default function Hd(props) {
-    let dbnavi = {     
-        topad : {
-            adtitle : "모든 회원에게 7월의 다가오는 혜택",
-            adlink : "http://www.11st.co.kr"
+import hd from '../scss/hd.module.css'
+
+const Hd = (props) => {
+    // const 내부에 map을 쓰면 Hd에서만 사용 가능. 외부에 적으면 다른 곳에서도 사용 가능
+    const hddata = {
+        pAction:true,
+        promotion:{
+            title:"오늘의 특가",
+            href:"https://naver.com",
+            target:"_blank",
+            cls:"event"
         },
-        navi : [
+        gnb:[
             {
-                nm : ['회사소개','company.html'],
-                cls : 'navi com'
+                title:"연령별고민",
+                href:"#age",
+                target:"",
+                cls:""
             },
             {
-                nm : ['제품소개','show.html'],
-                cls : 'navi pro'
+                title:"스테디셀러",
+                href:"#seller",
+                target:"",
+                cls:""
             },
             {
-                nm : ['고객센터','center.html'],
-                cls : 'navi contact'
+                title:"1만 리뷰",
+                href:"#review",
+                target:"",
+                cls:""
+            },
+            {
+                title:"요즘 인기",
+                href:"#popular",
+                target:"",
+                cls:""
             }
         ],
-        sns : [
+        util:[
             {
-                nm : "git",
-                nmlink : "http://github.com/4thdraw"
-
-            },{
-                nm : "notion",
-                nmlink : "http://notion.io/"
-
+                title:"공유하기",
+                href:"#share",
+                target:"",
+                cls:""
             }
         ]
-    }
-    return (
-        <>
-            <header className="fixed-top border-bottom bg-warning">
-                <div className="ad bg-dark text-center py-2">
-                    <a href={dbnavi.topad.adlink} className="text-white">{dbnavi.topad.adtitle}</a>
-                </div>
-                <div className="container d-flex justify-content-between align-items-center">
-                    <h1>
-                        <a href="">퍼블릭 svg</a>
-                    </h1>
-                    <ul id="gnb" className="d-flex">
-                        {
-                        dbnavi.navi.map(( val, idx) => {
-                                return(
-                                    <li className={val.cls} id={'navilist'+idx}>
-                                        <a href={val.nm[1]}>{val.nm[0]}</a>
-                                    </li>
-                                )
-                        })
-                        } 
-                    </ul>
-                    <ul className="sns d-flex">
-                       {
-                        dbnavi.sns.map(( val, idx) => {
-                                return(
-                                    <li >
-                                        <a href={val.nmlink}>{val.nm}</a>
-                                    </li>
-                                )
-                        })
-                        } 
+    } 
+    // {} 는 오브젝트(집합체, 한개) [ ] 는 어레이(여러개)?
 
-                    </ul>
-                </div>                
-            </header>           
-        </>
+    return (
+            <header id="hd" className={`fixed-top bg-white ${props.scrollcls}`}>
+                <div className="px-0"> 
+                    {/* row와 container는 같이 쓰면 충돌이 난다. (둘다 마진이 들어있음.) */}
+                    <div className="inner mx-auto d-flex justify-content-between align-items-center">
+                        <h1><a href="#top"></a></h1>
+                        <ul id="gnb" className="d-flex">
+                            {/* array.map(function(){}) */}
+                            {
+                               hddata.gnb.map(function(v,i){
+                                return (
+                                    <>
+                                    <li className="px-2"><a href="" className="d-block">{v.title}</a></li>
+                                    {hddata.pAction &&
+                                     ( i === 1&&
+                                        <li className={`px-2 ${hddata.promotion.cls}`}>
+                                            <a href={hddata.promotion.href} > {hddata.promotion.title} </a>
+                                        </li>
+                                     )
+                                    }
+                                    </>
+                                )
+                               })
+                            }
+                        </ul>
+                        <ul className="sns d-flex align-items center">
+                            {
+                                hddata.util.map(function(v,i){
+                                    return <li className="px-1">
+                                            <a href={v.href}>
+                                                <span className='visible-hidden'>공유하기</span>
+                                            </a></li>
+                                    
+                                })
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </header>   
+                    
     )
 }
 
+export default Hd

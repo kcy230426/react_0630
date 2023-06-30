@@ -5,17 +5,19 @@ export default function Banner(props) {
 
     return (
         <>   
-        <div className="h-100vh">
-        <div className={banner.container}>
-          swiper 리액트 플러그인으로 제작합니다.
-          </div>
-          <div className={"d-flex  "+banner.container + ' ' + banner.row}>
-            클래스명이 2개이상일때 공백이 필요하고 그 공백은 문자라서
-            공백과 문자를 결합해야함
-          </div> 
-          <div className={`d-flex ${banner.container}  ${banner.row}`}>
-            클래스명이 2개이상일때 공백이 필요하고 그 공백은 문자라서
-            공백과 문자를 결합해야함
+        <div id="banner" className={`${banner.mt52}`}>
+            
+          <div className={`d-flex boxwrap ${banner.container} ${banner.bgcolor}`}>
+            <div className={`boximg`}></div>
+            <div id="wrap" className="d-flex flex-column justify-content-center align-items-center">
+                <div className="adtitle d-flex justify-content-center">
+                    <div className='d-inline-block bg-black text-white adtitle'>나를 위한</div>
+                </div>
+                <h3 className='title1'>건강기능식품 추천</h3>
+                <div className='title2'>헬시차트</div>
+                <span className='ct-txt'>쇼핑 데이터로 살펴보는 건강기능상품</span>
+                <div className='bt-text'>분석기간:2022.01.01~2023.02.01</div>
+            </div>
           </div>
         </div>    
           

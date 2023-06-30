@@ -2,3 +2,207 @@
 .h-100vh{
     height: 100vh;
 }
+
+a{
+    text-decoration: none;
+    color: #222;
+}
+
+ul, h1, h2, h3, p{
+    margin:0;
+    padding:0;
+}
+
+body{
+    letter-spacing: -0.8px;
+}
+
+.container{
+    
+}
+
+#hd{
+    .inner{
+        position: relative;
+        max-width: 1258px !important;
+        padding: 15px 58px !important;
+    }
+    h1{
+        a{
+            position: absolute;
+            top: 15px;
+            left: 30px;
+            display: block;
+            width: 27px;
+            height: 27px;
+            background-image: url(../srcimg/common.png);
+            background-size: 200px 183px;
+            background-position: -171px -127px;
+            
+            // transform: scale(0.9); 소스 자체는 그대로, 하지만 시각적으로 줄여주는 효과!
+        }
+
+    }
+    #gnb{
+        li{
+            padding: 0 30px !important;
+            a{
+                font-family: "Noto Sans KR", sans-serif;
+                font-weight: 400;
+                font-size: 11pt;
+                
+            }
+        }
+    }
+    .sns{
+        a{
+            position: absolute;
+            top: 15px;
+            right: 30px;
+            display: block;
+            width: 28px;
+            height: 28px;
+            background-image: url(../srcimg/common.png);
+            background-size: 200px 183px;
+            background-position: -171px -66px;
+        }
+        span{
+            font-size: 0;
+        }
+    }
+}
+
+#banner{
+    height: 770px;
+    .adtitle{
+        padding: 10px 20px;
+        border-radius: 50px;
+    }
+    #wrap{
+        width: inherit;
+        z-index: 30;
+        margin: 0 auto;
+        margin-bottom: 90px;
+        color: white;
+        .adtitle{
+            font-size: 20pt;
+        }
+        .ct-txt{
+            margin-top: 18px;
+            font-size: 16pt;
+        }
+        .title1{
+            font-size: 40pt;
+        }
+        .title2{
+            font-size: 40pt;
+            font-weight: 600;
+        }
+        .bt-text{
+            position: absolute;
+            bottom: 130px;
+        }
+    }
+    .boxwrap{
+        position: relative;
+    }
+    .boxwrap:before{
+        content: "";
+        width: 100%;
+        background-color: #00c978;
+        border-radius: 30px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 90px;
+        right: 0;
+    }
+    .boximg{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 770px;
+        background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2023/03/healthychart/img_v2/bg_spot_green.png);   
+        background-size: 1500px 770px;
+        background-position: 50% 0;
+        background-repeat: no-repeat;
+        z-index: 10;
+     
+    }
+}
+
+#pt{
+    width: 100%;
+    .f-txt{
+        font-size: 18pt;
+        letter-spacing: -2px;
+    }
+    h3{
+        margin-top: 10px;
+        position: relative;
+        font-size: 40pt;
+        font-family: "Noto Sans KR";
+        font-weight: 700;
+        span{
+            margin-left: 10px;
+            position: absolute;
+            font-size: 12pt;
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 50px;
+        }
+    }
+    p{
+        margin-top: 15px;
+        color:rgb(179, 179, 179);
+        font-size:14pt;
+    }
+    #pt-wrap{
+        display: flex;
+        justify-content: center;
+    }
+    #pt-box{
+        width: 60%;
+        height: 508px;
+        border-radius: 50px;
+        background-color: #508efe;
+        background-size: contain;
+        background-position: 500px;
+        background-position-y: 80px; 
+        background-repeat: no-repeat;
+        background-image: url("https://campaign-cdn.pstatic.net/0/campaign/2023/03/healthychart/img_v2/bg_age_keyword.png");
+    }
+
+    .agewrap{
+        display: flex;
+        justify-content: center;
+    }
+    #agebox {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 10px 10px;
+        background-color: rgba(244, 245, 246, 0.9);
+        display: flex;
+        justify-content: center;
+        border-radius: 50px;
+        li{
+            padding: 10px 20px;
+            border-radius: inherit;
+            background-color: rgba(244, 245, 246, 0.9);
+            a{
+                color: #666;
+                font-family: "Noto Sans KR";
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.on{
+        background-color: #222 !important;
+        a{
+            color: white !important;
+        }
+}
